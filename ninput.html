@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+    <script>
+      function abc() {
+        var n = prompt("Enter a number", "Type Here...");
+        for (var i = 1; i <= n; i++) {
+          var x = document.createElement("INPUT");
+          x.setAttribute("type", "text");
+          document.write("<br><br>Text-Field " + i);
+          document.body.append(x);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <p>Click the button to create Text Fields.</p>
+    <button onclick="abc();">Try it</button>
+  </body>
+</html>

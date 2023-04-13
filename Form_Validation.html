@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration Form</title>
+  </head>
+
+  <body>
+    <h1>Student Registration Form</h1>
+
+    <form onsubmit="return validate()" class="registerForm">
+      <label for="name">Name:</label>
+      <input type="text" id="nametxt" name="name" required /><br />
+
+      <label for="email">Email:</label>
+      <input type="email" id="emailtxt" name="email" required /><br />
+
+      <label for="rolltxt">Roll Number</label>
+      <input type="number" id="rolltxt" name="roll" required /><br />
+
+      <label for="age">Age:</label>
+      <input
+        type="number"
+        id="age"
+        name="age"
+        min="18"
+        max="100"
+        required /><br />
+
+      <label for="mobiletxt">Mobile:</label>
+      <input type="tel" id="mobiletxt" name="mobile" required /><br />
+
+      <label for="gender">Gender:</label>
+      <input type="radio" id="male" name="gender" value="male" required />
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female" required />
+      <label for="female">Female</label>
+      <input type="radio" id="other" name="gender" value="other" required />
+      <label for="other">Other</label><br />
+
+      <label for="course">Course:</label>
+      <select id="course" name="course" required>
+        <option value="">--Select Course--</option>
+        <option value="MCA">MCA</option>
+        <option value="BTech">BTech</option>
+        <option value="MTech">MTech</option></select
+      ><br />
+
+      <input type="submit" value="Submit" />
+      <input type="reset" value="reset" />
+    </form>
+
+    <script type="text/javascript">
+      function validate() {
+        let name = document.getElementById("nametxt").value;
+        let roll = document.getElementById("rolltxt").value;
+        let email = document.getElementById("emailtxt").value;
+        let mobile = document.getElementById("mobiletxt").value;
+        let error;
+
+        let regExp_name = new RegExp("^[a-zA-Z]+$");
+        let regExp_roll = new RegExp("^[0-9]{8}$");
+        let regExp_email = new RegExp(
+          "^[a-zA-Z0-9_\.\-]+@[a-zA-Z_]+\.[a-zA-Z]{2,3}$"
+        );
+        let regExp_mobile = new RegExp("^[0-9]{10}$");
+
+        if (!regExp_name.test(name)) {
+          alert("Provided Name is not correct.");
+          return false;
+        }
+
+        if (!regExp_roll.test(roll)) {
+          alert(
+            "Provided Roll Number is not correct. Roll Number should be of 8 digits."
+          );
+          return false;
+        }
+
+        if (!regExp_email.test(email)) {
+          alert("Provided Email Address is not correct.");
+          return false;
+        }
+
+        if (!regExp_mobile.test(mobile)) {
+          alert(
+            "Provided Mobile Number is not correct. Mobile Number should be of 10 digits."
+          );
+          return false;
+        }
+
+        return true;
+      }
+    </script>
+  </body>
+</html>
