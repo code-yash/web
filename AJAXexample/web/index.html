@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AJAX Example</title>
+</head>
+<body>
+    <h1>My Favorite Movies</h1>
+    <ul id="movie-list">
+    </ul>
+    <button id="load-movies">Load Movies</button>
+    <script>
+        function loadMovies() {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var data = JSON.parse(xhr.responseText);
+                    for (var i = 0; i < data.length; i++) {
+                        var li = document.createElement("li");
+                        li.textContent = data[i].title;
+                        document.getElementById("movie-list").appendChild(li);
+                    }
+                }
+            };
+            xhr.open("GET", "movies", true);
+            xhr.send();
+        }
+        document.getElementById("load-movies").addEventListener("click", loadMovies);
+    </script>
+</body>
+</html>
