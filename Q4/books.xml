@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library>
+<book>
+    <title>The Lord of the Rings</title>
+    <author>J.R.R. Tolkien</author>
+    <genre>Fantasy</genre>
+    <year>1955</year>
+    <price>260 Rs</price>
+  </book>
+  <book>
+    <title>The Hunger Games</title>
+    <author>JSuzanne Collins</author>
+    <genre>Dystopian</genre>
+    <year>2008</year>
+    <price>220 Rs</price>
+  </book>
+  <book>
+    <title>To Kill a Mockingbird</title>
+    <author>Harper Lee</author>
+    <genre>Classic</genre>
+    <year>1960</year>
+    <price>230 Rs</price>
+  </book>
+  <book>
+    <title>The Girl with the Dragon Tattoo</title>
+    <author>HStieg Larsson</author>
+    <genre>Crime Thriller</genre>
+    <year>2005</year>
+    <price>200 Rs</price>
+  </book>
+  <book>
+    <title>The Hitchhiker's Guide to the Galaxy</title>
+    <author>Douglas Adams</author>
+    <genre>Comedic Fiction</genre>
+    <year>1979</year>
+    <price>250 Rs</price>
+  </book>
+  <book>
+    <title>Pride and Prejudice</title>
+    <author>Jane Austen</author>
+    <genre>Classic</genre>
+    <year>1813</year>
+    <price>320 Rs</price>
+  </book>
+</library>
